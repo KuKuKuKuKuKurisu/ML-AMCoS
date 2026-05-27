@@ -1,0 +1,10 @@
+postprocessor:
+  name: mlamcos
+  APS_mode: False
+  postprocessor_args:
+    noise: 0.3
+    topk: 2
+    noise_type: cutmix # cutmix/cutmix-center
+    selected_layers: [0, 1, 2, 3, 4] # 0, 1, 2, 3, 4
+    feature_type_list: [mean, mean, mean, mean, mean, mean] # flat/mean/stat
+  hyperparam_search_done: True
