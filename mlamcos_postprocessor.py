@@ -3,25 +3,13 @@ from typing import Any
 import numpy as np
 import torch
 import torch.nn as nn
-from scipy import linalg
-from sklearn.covariance import (empirical_covariance, ledoit_wolf,
-                                shrunk_covariance)
 from sklearn.decomposition import PCA
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
-from sklearn.linear_model import LogisticRegressionCV
-from sklearn.preprocessing import StandardScaler
 from torch.autograd import Variable
 from tqdm import tqdm
 
 from .base_postprocessor import BasePostprocessor
 from .info import num_classes_dict
-
-import torchvision.transforms as T
-import torch.nn.functional as F
-from PIL import Image
-import io
-from torchvision.transforms import v2
-from sklearn.metrics import roc_auc_score
 
 
 class CMCPostprocessor(BasePostprocessor):
