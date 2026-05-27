@@ -100,13 +100,6 @@ class CMCPostprocessor(BasePostprocessor):
         conf = torch.matmul(score_list, alpha)
         return pred, conf
 
-    def set_hyperparam(self, hyperparam: list):
-        self.magnitude = hyperparam[0]
-
-    def get_hyperparam(self):
-        return self.magnitude
-
-
 def tensor2list(x):
     return x.data.cpu().tolist()
 
